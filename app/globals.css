@@ -2,20 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 222 47% 11%;
+    --foreground: 213 31% 91%;
+
+    --primary: 153 96% 56%;
+    --primary-foreground: 222 47% 11%;
+
+    --muted: 223 47% 14%;
+    --muted-foreground: 215.4 16.3% 70%;
+
+    --accent: 153 96% 56%;
+    --accent-foreground: 222 47% 11%;
+
+    --border: 223 47% 14%;
+    --ring: 153 96% 56%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .demo-button {
+    @apply relative flex w-full flex-col items-center justify-center rounded-lg border-2 border-border p-6 text-center transition-all;
+    /* Remove hover background color */
+    &:hover {
+      background-color: inherit !important;
+      border-color: var(--border);
+      transform: translateY(-2px); /* Example animation */
+    }
+  }
+
+  .demo-title {
+    @apply mb-2 text-xl font-bold text-foreground;
+  }
+
+  .demo-description {
+    @apply text-sm text-muted-foreground;
+  }
+
+  .demo-section {
+    @apply space-y-4 rounded-lg border border-border bg-muted p-6 shadow-[0_0_30px_rgba(0,0,0,0.3)];
+  }
+
+  .code-block {
+    @apply rounded-md bg-background p-4 font-mono text-sm text-foreground border border-border;
+  }
+
+  .input-field {
+    @apply w-full rounded-md border border-border bg-background p-2 font-mono text-sm text-foreground focus:border-accent focus:ring-1 focus:ring-accent;
+  }
+}
+
+/* Cyberpunk-inspired grid background */
+.cyber-grid {
+  background-image: linear-gradient(
+      rgba(47, 240, 170, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(47, 240, 170, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Glowing text effect */
+.glow-text {
+  text-shadow: 0 0 10px rgba(47, 240, 170, 0.5);
 }
