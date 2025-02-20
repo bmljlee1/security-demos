@@ -76,6 +76,7 @@ Create a new directory under app/demo/
 Create a page.tsx file in the new directory
 Use the DemoLayout component for consistent styling
 Add the demo to the list in app/page.tsx
+
 📝 Project Structure
 security-demos/
 ├── app/
@@ -93,7 +94,9 @@ security-demos/
 │   ├── demo-layout.tsx
 │   └── toast.tsx
 └── public/
+
 🔒 Security Considerations
+
 While this application demonstrates security vulnerabilities, it does so in a controlled manner:
 
 All demonstrations are client-side simulations
