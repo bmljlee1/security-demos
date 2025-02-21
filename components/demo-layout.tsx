@@ -14,7 +14,7 @@ export default function DemoLayout({
     <div className="container mx-auto px-4 py-12">
       <div className="mb-8">
         <h1 className="mb-4 text-3xl font-bold">{title}</h1>
-        <p className="text-gray-600">{description}</p>
+        <p className="text-white">{description}</p>
       </div>
       {children}
     </div>

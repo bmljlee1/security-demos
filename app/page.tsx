@@ -52,7 +52,7 @@ export default function HomePage() {
         <h1 className="mb-4 text-4xl font-bold">
           Interactive Security Demonstrations
         </h1>
-        <p className="mx-auto max-w-2xl text-gray-600">
+        <p className="mx-auto max-w-2xl text-white">
           Learn about common web security vulnerabilities through hands-on
           demonstrations. Select a topic below to explore how attacks work and
           how to prevent them.
